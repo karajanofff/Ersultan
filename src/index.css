@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background: #f4f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.14), transparent 34rem),
+    radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), transparent 30rem),
+    #f4f7fb;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-grid-bg {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.glass-card {
+  border: 1px solid rgba(226, 232, 240, 0.82);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 55px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.card-hover {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.gradient-button {
+  background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.25);
+}
+
+.gradient-button:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0e7490 100%);
+}
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-area {
+    box-shadow: none !important;
+    border: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  main {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+}
